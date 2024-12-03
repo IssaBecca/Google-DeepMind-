@@ -314,7 +314,7 @@
 
 .latest-news-card-container {
   width: 31%;
-  height: auto;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -525,10 +525,12 @@
   width: fit-content;
   height: auto;
 }
+
 .technologies-first-container-bottom-header-title h3 {
   font-size: 1.8rem;
   color: #5f6368;
   font-weight: 400;
+  text-align: center;
 }
 
 .technologies-first-container-bottom-header-link {
@@ -621,7 +623,7 @@
 
 .technologies-second-container-card {
   width: 48%;
-  height: auto;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -998,6 +1000,7 @@
   color: #1a73e8;
   border-radius: 2rem;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .footer-bottom-container {
@@ -1060,8 +1063,65 @@
 }
 
 .btn-mobile-nav-container i {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #fff;
+}
+
+.menu-logo-container {
+  width: fit-content;
+  height: auto;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-google-logo-container {
+  width: 90px;
+  height: 30px;
+}
+
+.menu-google-logo-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-logo-text-container {
+  width: fit-content;
+  height: auto;
+}
+
+.menu-logo-text-container h1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #5f6368;
+}
+
+.mobile-about-foooter-container {
+  width: 100%;
+  height: auto;
+  display: none;
+  border-top: 1px solid #dadada;
+  padding-top: 1.5rem;
+}
+
+.mobile-about-foooter-text-container,
+.mobile-about-foooter-icon-container {
+  width: fit-content;
+  height: auto;
+}
+
+.mobile-about-foooter-icon-container {
+  color: #202124;
+  font-size: 1.8rem;
+}
+
+.mobile-about-foooter-text-container h3 {
+  color: #202124;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.mobile-sign-up-btn-container {
+  display: none;
 }
 
 /* Medium Version */
@@ -1076,13 +1136,19 @@
   }
 
   .left-header-container {
+    align-items: start;
+    column-gap: 1.5rem;
+  }
+
+  .navigation-links-container {
     flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: 1.5rem;
+    padding: 2rem 1rem 2rem 1rem;
     width: 50%;
     height: 100vh;
     background-color: #fff;
-    justify-content: start;
-    align-items: start;
-    row-gap: 2rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -1091,23 +1157,6 @@
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-  }
-
-  .google-deepmind-logo-container {
-    padding: 5rem 2rem 2rem 2rem;
-  }
-
-  .google-deepmind-logo-container h1 {
-    color: #202124;
-  }
-  .navigation-links-container {
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    row-gap: 1.5rem;
-    width: 100%;
-    padding: 2rem 1rem 2rem 1rem;
-    border-top: 1px solid #e3e3e3;
   }
 
   .about-container {
@@ -1125,7 +1174,7 @@
     font-size: 1.5rem;
   }
 
-  .nav-open .left-header-container {
+  .nav-open .navigation-links-container {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
@@ -1141,5 +1190,183 @@
     background-color: #f1f3f4;
     border: 1px solid #e3e3e3;
     font-size: 2rem;
+  }
+
+  .first-about-container {
+    border-top: 1px solid #e3e3e3;
+    padding-top: 2rem;
+  }
+
+  .nav-open .menu-logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.2rem;
+    padding: 3rem 2rem 0 2rem;
+  }
+
+  .main-content-container {
+    padding: 3rem 2rem;
+  }
+
+  .latest-news-card-container,
+  .technologies-third-container-card {
+    width: 46%;
+  }
+
+  .latest-news-cards-container,
+  .technologies-third-container {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .explore-heading-container,
+  .explore-content-container {
+    width: 100%;
+  }
+
+  .about-learn-container {
+    display: none;
+  }
+
+  .mobile-about-foooter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .sign-up-btn-container {
+    display: none;
+  }
+
+  .mobile-sign-up-btn-container {
+    display: block;
+    width: 30%;
+    padding: 0.3rem 1.5rem;
+  }
+
+  .mobile-sign-up-btn-container button {
+    padding: 0.8rem 2.2rem;
+  }
+
+  .form-row-mobile {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-text-container {
+    width: 70%;
+  }
+
+  .footer-top-container {
+    padding: 0;
+  }
+
+  .footer {
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .contact-us-container {
+    padding: 1.5rem 0;
+  }
+
+  .footer-bottom-container {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 4rem;
+    padding: 1rem 0;
+  }
+
+  .technologies-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 5rem 0;
+    row-gap: 3em;
+  }
+}
+
+/* SMALL / Smartphones Version */
+@media screen and (max-width: 480px) {
+  .main-content-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .latest-news-card-container,
+  .technologies-second-container-card {
+    width: 100%;
+  }
+
+  .latest-news-cards-container,
+  .technologies-second-container {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .explore-heading-container,
+  .explore-content-container {
+    width: 100%;
+  }
+
+  .navigation-links-container {
+    width: 85%;
+    height: 100vh;
+  }
+
+  .sign-up-btn-container {
+    display: block;
+  }
+
+  .mobile-sign-up-btn-container {
+    display: none;
+  }
+
+  .responsibilty-title-container {
+    width: 100%;
+    height: auto;
+    display: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .technologies-first-container-bottom-header-title h3 {
+    font-size: 1.3rem;
+    color: #5f6368;
+    font-weight: 400;
+  }
+
+  .technologies-first-container {
+    row-gap: 3rem;
   }
 }
