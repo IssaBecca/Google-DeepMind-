@@ -71,6 +71,7 @@
 .google-deepmind-logo-container {
   width: 250px;
   height: 35px;
+  cursor: pointer;
 }
 
 .google-deepmind-logo-container h1 {
@@ -97,6 +98,7 @@
   justify-content: space-between;
   align-items: center;
   column-gap: 0.1rem;
+  cursor: pointer;
 }
 
 .about-link-container {
@@ -1041,4 +1043,103 @@
   color: #5f6368;
   font-size: 1.1rem;
   font-weight: 400;
+}
+
+.close-menu {
+  display: none;
+}
+
+.btn-mobile-nav-container {
+  width: fit-content;
+  height: auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  display: none;
+}
+
+.btn-mobile-nav-container i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Medium Version */
+@media screen and (max-width: 1120px) {
+  .btn-mobile-nav-container {
+    display: block;
+    z-index: 9999;
+  }
+
+  .header-container {
+    position: relative;
+  }
+
+  .left-header-container {
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    background-color: #fff;
+    justify-content: start;
+    align-items: start;
+    row-gap: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+    transition: all 0.3s ease-in;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .google-deepmind-logo-container {
+    padding: 5rem 2rem 2rem 2rem;
+  }
+
+  .google-deepmind-logo-container h1 {
+    color: #202124;
+  }
+  .navigation-links-container {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: 1.5rem;
+    width: 100%;
+    padding: 2rem 1rem 2rem 1rem;
+    border-top: 1px solid #e3e3e3;
+  }
+
+  .about-container {
+    width: 100%;
+  }
+
+  .about-link-container a {
+    color: #5f6368;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .about-icon-container i {
+    color: #5f6368;
+    font-size: 1.5rem;
+  }
+
+  .nav-open .left-header-container {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .nav-open .open-menu {
+    display: none;
+  }
+
+  .nav-open .close-menu {
+    display: block;
+    color: #4d4d50;
+    background-color: #f1f3f4;
+    border: 1px solid #e3e3e3;
+    font-size: 2rem;
+  }
 }
